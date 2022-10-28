@@ -1,7 +1,6 @@
 import React from "react";
-import AllUsers from "./AllUsers.jsx";
+import AllUsers from "./AllUsers";
 import Pagination from "./Pagination";
-import { Outlet } from "react-router-dom";
 
 const Users = () => {
   return (
@@ -10,7 +9,6 @@ const Users = () => {
         <AllUsers />
         <Pagination />
       </div>
-      {/* <Outlet /> */}
     </>
   );
 };
