@@ -58,3 +58,14 @@ button.active {
   background: yellow;
   color: #000;
 }
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

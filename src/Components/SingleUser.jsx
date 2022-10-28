@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 
-const UserDetails = () => {
+const SingleUser = () => {
   const { cell } = useParams();
   const url = "https://randomuser.me/api/?page=3&results=50&seed=abc";
   const [details, setDetails] = useState([]);
@@ -48,4 +48,4 @@ const UserDetails = () => {
   );
 };
 
-export default UserDetails;
+export default SingleUser;
