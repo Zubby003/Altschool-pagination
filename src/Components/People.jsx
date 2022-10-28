@@ -11,8 +11,8 @@ const People = ({ user }) => {
         <img src={user.picture.large} />
 
         <p>{`Full Name:${user.name.first} ${user.name.last}`}</p>
-        <p>{`Email:${user.email}`}</p>
-        <p>{`Phone:${user.phone}`}</p>
+        {/* <p>{`Email:${user.email}`}</p> */}
+        {/* <p>{`Phone:${user.phone}`}</p> */}
         <Link to={`/users/${user.cell}`}>more details</Link>
       </div>
       <Outlet />

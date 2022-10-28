@@ -9,7 +9,6 @@ const AppProvider = ({ children }) => {
   const [users, setUsers] = useState([]);
   const [pages, setPages] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
-  const [disabled, setDisabled] = useState(false);
 
   const FetchUsers = async () => {
     setLoading(true);
@@ -29,16 +28,13 @@ const AppProvider = ({ children }) => {
     setPages(num);
   };
   const nextPage = () => {
-    setPages((prev) => prev + 1);
-    if (!pages.length) {
-      setDisabled(true);
-    }
+    setPages((prev) => (prev === totalPages ? prev : prev + 1));
   };
   const prevPage = () => {
-    setPages((prev) => prev - 1);
-    if (pages === 1) {
-      setDisabled(true);
-    }
+    setPages((prev) => (prev === 1 ? prev : prev - 1));
+    // if (pages === 1) {
+    //   setDisabled(true);
+    // }
   };
   return (
     <AppContext.Provider
@@ -50,7 +46,6 @@ const AppProvider = ({ children }) => {
         handleClick,
         nextPage,
         prevPage,
-        disabled,
       }}
     >
       {children}

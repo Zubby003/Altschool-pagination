@@ -5,10 +5,7 @@ import People from "./People";
 
 const AllUsers = () => {
   const { users, pages, loading } = useGlobalContext();
-  console.log(users);
-  if (loading) {
-    return <h1>Loading...</h1>;
-  }
+  // console.log(users);
 
   const startIndex = (pages - 1) * USER_PER_PAGE;
   const seletedUsers = users.slice(startIndex, startIndex + USER_PER_PAGE);

@@ -32,8 +32,7 @@ const UserDetails = () => {
     };
     FetchDetails();
   }, [cell]);
-  // const {}
-  // console.log(myData);
+
   const { gender, email, large, first, last } = details;
   return (
     <section className="app">
