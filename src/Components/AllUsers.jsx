@@ -4,7 +4,6 @@ import People from "./People";
 
 const AllUsers = () => {
   const { users, pages, postsPerPage } = useGlobalContext();
-  // console.log(users);
 
   const startIndex = (pages - 1) * postsPerPage;
   const seletedUsers = users.slice(startIndex, startIndex + postsPerPage);
