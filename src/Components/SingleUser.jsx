@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import axios from "axios";
+import LoadingImage from "../assets/loading.gif";
 import { useGlobalContext } from "./Context";
 
 const SingleUser = () => {
-  const { users } = useGlobalContext();
+  const { users, loading } = useGlobalContext();
   const { id } = useParams();
 
   const NewArray = users.find((val) => {
     return val.login.uuid === id;
   });
 
-  console.log(users);
+  // console.log(users);
 
   const {
     gender: gender,

@@ -1,12 +1,18 @@
 import React from "react";
 import { useGlobalContext } from "./Context";
+// import LoadingImage from "../..assets/loading.gif";
+import LoadingImage from "../assets/loading.gif";
 
 const Pagination = () => {
   const { totalPages, handleClick, nextPage, prevPage, pages, loading } =
     useGlobalContext();
   const pagesz = [...Array(totalPages).keys()].map((num) => num + 1);
   if (loading) {
-    return <h1>Loading...</h1>;
+    return (
+      <div className="loading-state">
+        <img src={LoadingImage} alt="Loading" />
+      </div>
+    );
   }
   return (
     <div className="page-btn">

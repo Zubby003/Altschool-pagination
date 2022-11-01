@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import axios from "axios";
+
 const url = "https://randomuser.me/api/?page=3&results=50&seed=abc";
 const AppContext = React.createContext();
 
